@@ -24,6 +24,7 @@
     "nodemailer": "^6.9.7",
     "nodemon": "^3.0.1",
     "react-lottie": "^1.2.3",
+    "react-redux": "^9.0.3",
     "react-toastify": "^9.1.3"
   }
 }
