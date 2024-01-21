@@ -79,9 +79,7 @@ const CartSingle = ({ data,removeFromWishlistHandler,addToCartHandler }) => {
   return (
     <div className="border-b p-4">
       <div className="w-full 800px:flex items-center">
-        <RxCross1 className="cursor-pointer 800px:mb-['unset'] 800px:ml-['unset'] mb-2 ml-2"
-        onClick={() => removeFromWishlistHandler(data)}
-        />
+     
         <img
           src={`${backend_url}${data?.images[0]}`}
           alt=""
@@ -93,13 +91,23 @@ const CartSingle = ({ data,removeFromWishlistHandler,addToCartHandler }) => {
           <h4 className="font-[600] pt-3 800px:pt-[3px] text-[17px] text-[#d02222] font-Roboto">
             US${totalPrice}
           </h4>
+             {/* <RxCross1 className="cursor-pointer 800px:mb-['unset'] 800px:ml-['unset'] mb-2 ml-2"
+        onClick={() => removeFromWishlistHandler(data)}
+        /> */}
         </div>
+       
         <div>
           <BsCartPlus size={20} className="cursor-pointer" tile="Add to cart"
            onClick={() => addToCartHandler(data)}
           />
         </div>
+        
       </div>
+      <div className="ml-auto">
+        <RxCross1 className="cursor-pointer 800px:mb-['unset'] 800px:ml-['unset'] mb-2 ml-2"
+        onClick={() => removeFromWishlistHandler(data)}
+        />
+        </div>
     </div>
   );
 };

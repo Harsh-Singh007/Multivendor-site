@@ -127,7 +127,11 @@ const CartSingle = ({ data, quantityChangeHandler, removeFromCartHandler }) => {
           >
             <HiOutlineMinus size={16} color="#7d879c" />
           </div>
+          <div>
+        
+          </div>
         </div>
+        
         <img
           src={`${backend_url}${data?.images[0]}`}
           alt=""
@@ -142,6 +146,9 @@ const CartSingle = ({ data, quantityChangeHandler, removeFromCartHandler }) => {
             US${totalPrice}
           </h4>
         </div>
+        
+      </div>
+      <div className="ml-auto">
         <RxCross1
           className="cursor-pointer"
           onClick={() => removeFromCartHandler(data)}
