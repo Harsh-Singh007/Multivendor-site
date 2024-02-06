@@ -101,7 +101,7 @@ const OrderDetails = () => {
             <div className="w-full">
               <h5 className="pl-3 text-[20px]">{item.name}</h5>
               <h5 className="pl-3 text-[20px] text-[#00000091]">
-                US${item.discountPrice} x {item.qty}
+                INR  ₹ {item.discountPrice} x {item.qty}
               </h5>
             </div>
           </div>

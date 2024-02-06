@@ -20,6 +20,28 @@ const ShopCreate = () => {
      
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+
+// Basic validation
+if (!name || !email || !password || !address || !zipCode || !phoneNumber || !avatar) {
+  toast.error("All fields are required");
+  return;
+}
+
+// Email validation
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email)) {
+  toast.error("Invalid email address");
+  return;
+}
+
+// Phone number validation
+const phoneRegex = /^[0-9]{10}$/;
+if (!phoneRegex.test(phoneNumber)) {
+  toast.error("Invalid phone number");
+  return;
+}
+
     const config = { headers: { "Content-Type": "multipart/form-data" } };
 
     const newForm = new FormData();
@@ -246,5 +268,12 @@ const ShopCreate = () => {
     </div>
   );
 };
+
+
+
+
+
+
+
 
 export default ShopCreate;
